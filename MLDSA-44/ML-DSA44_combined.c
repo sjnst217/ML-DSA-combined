@@ -2957,7 +2957,7 @@ int PQCLEAN_MLDSA44_CLEAN_crypto_sign_verify_ctx(const uint8_t *sig, size_t sigl
     shake256_inc_ctx_release(&state);
 
 
-    /* Matrix-vector multiplication; compute Az - c2^dt1 */
+    /* Matrix-vector multiplication; compute Az - c * 2^d *t1 */
     PQCLEAN_MLDSA44_CLEAN_poly_challenge(&cp, c);
     PQCLEAN_MLDSA44_CLEAN_polyvec_matrix_expand(mat, rho);
 
